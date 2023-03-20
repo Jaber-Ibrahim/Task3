@@ -1,0 +1,369 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;  
+}
+/* ----------------------start rules---------------------- */
+:root {
+    --main-color :  #4b7792;
+    --background-color-on-hover : #c7e1f1;
+    --main-transition : 0.5s;
+    --main-title-border-h3-color : #d6d6d6;;
+    --margin-top-bottom : 100px;
+    --margin-left-right :10px;
+    --card-padding : 20px;
+}
+.container {
+    margin-top: var(--margin-top-bottom);
+    margin-bottom: var(--margin-top-bottom);
+    margin-left: var(--margin-left-right) ;
+    margin-right: var(--margin-left-right) ;
+
+}
+.heading {
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--main-title-border-h3-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+@media(max-width : 635px) {
+    .heading {
+        text-align: center;
+    }
+}
+/* ----------------------end rules---------------------- */
+
+
+/* ----------------------start nav---------------------- */
+nav {
+    position: fixed;
+    top: 0%;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+nav .logo {
+    padding: 10px;
+}
+nav .logo span {
+    font-size: 18px;
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+nav .items {
+    display: flex;
+}
+nav .items a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 16px 0;
+    text-align: center;
+    position: relative;
+    transition: var(--main-transition);
+    width: 100px;
+}
+
+nav .items a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+nav .items a:hover {
+    background-color: var(--background-color-on-hover);
+    color: var(--main-color);
+}
+nav .items a:hover::before{
+    width: 100% ;
+}
+nav .fa-solid {
+    display: none;
+}
+@media (max-width : 635px) {
+    nav .fa-solid {
+        display:block;
+        font-size: 30px;
+        padding-right: 10px;
+    }
+    nav .items {
+        display: none;
+    }
+    nav .fa-solid:hover + .items {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(0 0 0 / 50%);
+    }
+    nav .items a {
+        width: 100vw;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+}
+/* ----------------------start nav---------------------- */
+
+
+
+/* ----------------------start landing---------------------- */
+.landing {
+    background-image: url(../images/landing.jpg);
+    height: 100vh; 
+    background-size: cover ;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+}
+.landing h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    color: white;
+}
+@media(max-width : 635px) {
+    .landing h1 {
+    text-align: center;
+    line-height: 1.6;
+    }
+}
+.landing  h1 span {
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(0 0 0 / 50%);
+}
+/* ----------------------end landing---------------------- */
+
+
+/* ----------------------start projects---------------------- */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project-container .card-project {
+    width: 50%;
+    padding: var(--card-padding);/*مشان تاخد هاليمة من عرض الديف نفسو وما يصير مشكلة وتنزل لتحت*/
+}
+@media(max-width : 635px) {
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-container .card-project {
+        width: 80%;
+    }
+}
+.project-container .card-project h1 {
+    position: absolute;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: white;
+    background-color: black;
+}
+.project-container .card-project .image img {
+    width: 100%;
+}
+
+
+/* ----------------------end projects---------------------- */
+
+
+/* ----------------------start about---------------------- */
+
+.about-container {
+    margin-top: var(--margin-top-bottom);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 75px 2px;
+}
+.about-container .card-about {
+    width: 49%;
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--main-title-border-h3-color);
+}
+@media (max-width : 635px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-container .card-about {
+        width: 80%;
+        text-align: center;
+    }
+}
+.about-container .card-about .image {
+    position: relative;
+    overflow: hidden;
+}
+.about-container .card-about .image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    background-color:  rgba(253, 250, 250, 0.3);;
+    transition: var(--main-transition);
+}
+.about-container .card-about:hover .image::before{
+    width: 300%;
+    height: 300%;
+    z-index: 1;
+}
+.about-container .card-about .image img {
+    width: 100%;
+    transition: var(--main-transition);
+}
+.about-container .card-about:hover  img {
+    transform: scale(1.2) skew(1.5deg);
+}
+.about-container .card-about h3 {
+    color: var(--main-title-border-h3-color);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.about-container .card-about button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;;
+    font-size: 16px;
+}
+
+/* ----------------------end about---------------------- */
+
+
+/* ----------------------start contact---------------------- */
+
+.form {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    flex-direction: column;
+    gap: 20px;
+}
+.form .input {
+    width: 100%;
+    border: none;
+    box-shadow: 0px 1px 8px 3px  var(--main-title-border-h3-color);
+    padding: 10px;
+    caret-color: #4b7792;
+    color: #4b7792;
+}
+.form .input:focus {
+    outline: none;
+    color: #4b7792;
+}
+.form .input:first-child {
+    margin-top: 20px;
+}
+.form button {
+    width: 100px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #4b7792;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ----------------------end contact---------------------- */
+
+
+/* ----------------------start footer---------------------- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--main-color);
+    color: white;
+    height: 100px;
+    font-size: 25px;
+    font-weight: bold;
+}
+@media (max-width : 635px) {
+    footer {
+        flex-direction: column;
+    }
+}
+footer .icons {
+    display: inline-flex;
+    gap: 20px;
+}
+footer .icons a {
+    text-decoration: none;
+}
+footer .icons a .fa-brands {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255 255 255 / 70%);
+} 
+footer .icons .fa-linkedin{
+    color: #1a73e8;
+    transition: var(--main-transition);
+}
+footer .icons .fa-linkedin:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+footer .icons .fa-twitter {
+    color: #1c9ceb;
+    transition: var(--main-transition);
+}
+footer .icons .fa-twitter:hover {
+    background-color: #1c9ceb;
+    color: white;
+}
+footer .icons .fa-facebook {
+    color: #1773ea;
+    transition: var(--main-transition);
+}
+footer .icons .fa-facebook:hover {
+    background-color: #1773ea;
+    color: white;
+}
+footer .icons .fa-youtube {
+    color: #f70000;
+    transition: 0.5s;
+}
+footer .icons .fa-youtube:hover {
+    background-color: #f70000;
+    color: white;
+}
+/* ----------------------end footer---------------------- */

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Start of nav -->
+    <nav>
+      <div class="logo">
+        <h1>
+          BR
+          <span>Architects</span>
+        </h1>
+      </div>
+      <i class="fa-solid fa-bars"></i>
+      <div class="items">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <!-- End of nav -->
+
+    <!-- start landing-->
+    <section class="landing">
+      <div class="content">
+        <h1>
+          <span>BR</span>
+          Architects
+        </h1>
+      </div>
+    </section>
+    <!--end landing -->
+
+    <!-- start programs -->
+
+    <section class="container" id="projects">
+      <h1 class="heading">Projects</h1>
+      <div class="project-container">
+        <div class="card-project">
+          <h1>First house</h1>
+          <div class="image">
+            <img
+              src="./assets/images/project.jpg"
+              alt="advices to swim right"
+            />
+          </div>
+        </div>
+        <div class="card-project">
+          <h1>First house</h1>
+          <div class="image">
+            <img
+              src="./assets/images/project.jpg"
+              alt="advices to swim right"
+            />
+          </div>
+        </div>
+        <div class="card-project">
+          <h1>First house</h1>
+          <div class="image">
+            <img
+              src="./assets/images/project.jpg"
+              alt="advices to swim right"
+            />
+          </div>
+        </div>
+        <div class="card-project">
+          <h1>First house</h1>
+          <div class="image">
+            <img
+              src="./assets/images/project.jpg"
+              alt="advices to swim right"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end programs -->
+
+    <!-- start about  -->
+    <section class="container" id="about">
+      <h1 class="heading">About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus
+        culpa ducimus quia! Delectus, tempore! Recusandae soluta debitis
+        corporis officia inventore iste nesciunt, aliquid minima ea maiores
+        expedita sit et?
+      </p>
+      <div class="about-container">
+        <div class="card-about">
+          <div class="image">
+            <img src="./assets/images/about1.jpg" alt="personal photo" />
+          </div>
+          <h1>Brayen Cranston</h1>
+          <h3>CEO & Founder</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <button type="submit">Submit</button>
+        </div>
+
+        <div class="card-about">
+          <div class="image">
+            <img src="./assets/images/about2.jpg" alt="personal photo" />
+          </div>
+          <h1>George Rea</h1>
+          <h3>Coach and Partner</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button type="submit">Submit</button>
+        </div>
+
+        <div class="card-about">
+          <div class="image">
+            <img src="./assets/images/about3.jpg" alt="personal photo" />
+          </div>
+          <h1>Mella Swe</h1>
+          <h3>Coach</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button type="submit">Submit</button>
+        </div>
+
+        <div class="card-about">
+          <div class="image">
+            <img src="./assets/images/about4.jpg" alt="personal photo" />
+          </div>
+          <h1>Anso Mel</h1>
+          <h3>Coach</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </section>
+    <!-- end about -->
+
+    <!-- Start Contact -->
+    <section class="container" id="contact">
+        <h1 class="heading">contact</h1>
+        <form class="form" action="">
+            <input class="input" type="text" placeholder="Your Name">
+            <input class="input" type="email" placeholder="Your Email">
+            <textarea class="input" id="" cols="20" rows="5" placeholder="Write Your Comment Here"></textarea>
+            <input class="input" type="tele" placeholder="Your Phone">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Start footer -->
+    <footer>
+    <p>Created By: Jaber Ibrahim <span id="date"></span>
+        <div class="icons">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/jaber.ebra/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+</footer>
+    <!-- End Footer -->
+  </body>
+  <script>
+    document.getElementById("date").innerHTML = new Date().getFullYear();
+  </script>
+</html>
